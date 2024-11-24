@@ -1,4 +1,4 @@
-* {
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden; 
 }
 
 
@@ -14,10 +15,12 @@ body {
     top: 0;
     width: 100%;
     background-color: #81d8d0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px; 
+    display: block; 
+    text-align: center; 
+    box-sizing: border-box; 
+    overflow-x: hidden; 
+    z-index: 1000; 
 }
 
 .logo img {
@@ -25,10 +28,20 @@ body {
     height: auto;
 }
 
+h1.logo {
+    margin: 0; 
+}
+
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: inline-block;
+    margin: 0; 
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; 
+    margin: 0 20px;
 }
 
 .nav-links li a {
@@ -38,33 +51,127 @@ body {
 }
 
 
-.slide {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 70px;
-    text-align: center;
+#home .background-image {
+    background-image: url('diapo1/diapo 1.jpg'); 
+    background-size: contain; 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%; 
+    display: inline-block;
+    text-align: center; 
+    position: relative;
+    padding-top: 350px; 
+    margin-top: 50px; 
 }
 
-#home .logo-completo {
-    width: 100%;
-    max-width: 1850px;
-    object-fit: cover;
-    margin: 0 auto;
+
+
+#home .background-image h2 {
+    font-size: 70px;
+    color: black;
+    text-shadow: 2px 2px 4px #81d8d0;
+}
+
+#home .background-image h3 {
+    font-size: 24px; 
+    color: #333; 
+    margin-top: 20px; 
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); 
+    font-style: italic; 
+}
+
+
+
+#quien-soy {
+    position: relative; 
+    text-align: center; 
+    padding: 50px 50px; 
+}
+
+.side-image {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 40%; 
+    margin: 15px; 
 }
 
 .side-image img {
-    width: 400px;
-    border-radius: 50%;
+    width: 80%; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.texto {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 50%; 
+    text-align: left;
+    margin: 15px; 
 }
 
 .text-frame {
+    padding: 20px; 
+    border: 2px solid #81d8d0; 
+    margin-top: 100px; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    line-height: 1.6; 
+}
+
+
+
+#servicios {
+    text-align: center; 
+    padding: 70px 20px; 
+}
+
+.services {
+    list-style: none;
+    margin: 0 auto; 
+    padding: 50px;
+    text-align: center; 
+}
+
+.services li {
+    display: inline-block; 
+    width: 320px; 
+    margin: 20px; 
+    vertical-align: top; 
+}
+
+.circle-image {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.services li figcaption {
+    margin-top: 10px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #333; 
+    text-align: center; 
+    padding-left: 60px; 
+}
+
+
+
+footer {
+    background-color: #81d8d0; 
+    text-align: center;
     padding: 20px;
-    border: 2px solid #81d8d0;
-    margin-top: 20px;
-    max-width: 700px;
-    text-align: left;
-    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: black;
 }
